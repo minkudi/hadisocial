@@ -1,0 +1,36 @@
+{
+  "name": "bk-ebanking",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "apexcharts": "^5.6.0",
+    "jsonwebtoken": "^9.0.3",
+    "jspdf": "^4.2.0",
+    "jspdf-autotable": "^5.0.7",
+    "mysql2": "^3.16.3",
+    "next": "^16.1.6",
+    "next-intl": "^4.8.2",
+    "nodemailer": "^8.0.0",
+    "react": "^19.2.4",
+    "react-apexcharts": "^2.0.1",
+    "react-autolocalise": "^1.1.3",
+    "react-dom": "^19.2.4",
+    "react-international-phone": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "25.3.2",
+    "@types/react": "19.2.14",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19"
+  }
+}
