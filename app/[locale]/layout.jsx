@@ -1,7 +1,8 @@
 // app/[locale]/layout.jsx
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { getEnabledLocales } from "../../lib/localesServer";
 import AuthLanguageWrapper from "./AuthLanguageWrapper";
 
 const locales = [
@@ -29,6 +30,12 @@ export default async function LocaleLayout({ children, params }) {
 
   if (!locales.includes(locale)) {
     notFound();
+  }
+
+  // Rediriger vers le français si la langue a été désactivée par le super admin
+  const enabledLocales = await getEnabledLocales();
+  if (!enabledLocales.includes(locale)) {
+    redirect(`/${enabledLocales.includes("fr") ? "fr" : enabledLocales[0]}`);
   }
 
   const messages = await getMessages({ locale });

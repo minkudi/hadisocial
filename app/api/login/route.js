@@ -12,9 +12,9 @@ export async function POST(req) {
 
     const db = await getDb();
 
-    // On récupère aussi is_admin
+    // On récupère aussi is_admin et is_super_admin
     const [users] = await db.execute(
-      "SELECT id, email, full_name, is_admin FROM users WHERE email = ? AND password = ? LIMIT 1",
+      "SELECT id, email, full_name, is_admin, is_super_admin FROM users WHERE email = ? AND password = ? LIMIT 1",
       [email, password]
     );
 
@@ -59,6 +59,15 @@ export async function POST(req) {
       path: "/",
     });
 
+    // Cookie is_super_admin
+    cookieStore.set("is_super_admin", user.is_super_admin ? "1" : "0", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 7,
+      path: "/",
+    });
+
     return NextResponse.json({
       success: true,
       user: {
@@ -66,6 +75,7 @@ export async function POST(req) {
         email: user.email,
         fullName: user.full_name,
         isAdmin: !!user.is_admin,
+        isSuperAdmin: !!user.is_super_admin,
         accountNumber: account.account_number,
         balance: account.balance,
       },

@@ -37,7 +37,10 @@ export default function LoginPage() {
       if (!res.ok) {
         setError(responseData.error || t('errorGeneric'));
       } else {
-        router.push(`/${locale}/dashboard`);
+        // Les admins sont redirigés vers le back-office
+        router.push(
+          responseData.user.isAdmin ? `/${locale}/admin` : `/${locale}/dashboard`
+        );
       }
     } catch (err) {
       setError(t('errorNetwork'));

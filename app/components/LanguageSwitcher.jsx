@@ -1,29 +1,35 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import { ALL_LOCALES, DEFAULT_ENABLED_LOCALES } from '../../lib/availableLocales';
 
 export default function LanguageSwitcher({ currentLocale }) {
   const router = useRouter();
   const pathname = usePathname();
+  const [enabledLocales, setEnabledLocales] = useState(null);
 
-  const languages = [
-    { code: 'fr', label: 'Français', flag: '🇫🇷' },
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-    { code: 'nl', label: 'Nederlands', flag: '🇳🇱' },
-    { code: 'fi', label: 'Suomi', flag: '🇫🇮' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'pl', label: 'Polski', flag: '🇵🇱' },
-    { code: 'pt', label: 'Português', flag: '🇵🇹' },
-    { code: 'sk', label: 'Slovenčina', flag: '🇸🇰' },
-    { code: 'bg', label: 'Български', flag: '🇧🇬' },
-    { code: 'el', label: 'Ελληνικά', flag: '🇬🇷' },
-    { code: 'sl', label: 'Slovenščina', flag: '🇸🇮' },
-    { code: 'lt', label: 'Lietuvių', flag: '🇱🇹' },
-    { code: 'lv', label: 'Latviešu', flag: '🇱🇻' },
-    { code: 'it', label: 'Italiano', flag: '🇮🇹' },
-    { code: 'cs', label: 'Čeština', flag: '🇨🇿' },
-  ];
+  useEffect(() => {
+    async function load() {
+      try {
+        const res = await fetch('/api/locales');
+        if (res.ok) {
+          const json = await res.json();
+          setEnabledLocales(json.locales);
+          return;
+        }
+      } catch (_) {}
+      setEnabledLocales(DEFAULT_ENABLED_LOCALES);
+    }
+    load();
+  }, []);
+
+  const languages = ALL_LOCALES.filter(
+    (lang) =>
+      !enabledLocales ||
+      enabledLocales.includes(lang.code) ||
+      lang.code === currentLocale
+  );
 
   const handleChange = (newLocale) => {
     const segments = pathname.split('/');

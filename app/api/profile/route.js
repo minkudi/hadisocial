@@ -86,10 +86,15 @@ export async function PUT(req) {
       );
     }
 
-    const { email, phone, address, country } = body;
+    const { fullName, email, phone, address, country } = body;
 
     const fields = [];
     const values = [];
+
+    if (typeof fullName === "string" && fullName.trim()) {
+      fields.push("full_name = ?");
+      values.push(fullName.trim());
+    }
 
     if (typeof email === "string" && email.trim()) {
       fields.push("email = ?");
