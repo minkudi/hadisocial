@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Tilin avaaminen",
     "description": "Tyytyväisyytesi on meille tärkeintä.",
     "fullName": "Koko nimi",
@@ -21,7 +21,7 @@
     "successMessage": "Tili luotu. Tilinumero: {accountNumber}",
     "errorNetwork": "Verkkovirhe",
     "successTitle": "Tili luotu onnistuneesti",
-    "successWelcome": "Tervetuloa OLAKREDiin.",
+    "successWelcome": "Tervetuloa HADI SOCIALiin.",
     "successBody": "Onnittelut, tilisi on rekisteröity onnistuneesti järjestelmäämme.",
     "successRedirect": "Sinut ohjataan kirjautumissivulle",
     "successSecond": "sekunnin",
@@ -31,7 +31,7 @@
     "errorGeneric": "Virhe"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Kirjautuminen",
     "description": "Kirjaudu pankkitilillesi.",
     "email": "Sähköposti",

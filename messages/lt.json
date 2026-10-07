@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Sąskaitos atidarymas",
     "description": "Jūsu apmierinātība ir mūsu prioritāte.",
     "fullName": "Vardas ir pavardė",
@@ -21,7 +21,7 @@
     "successMessage": "Paskyra sukurta. Sąskaitos numeris: {accountNumber}",
     "errorNetwork": "Tinklo klaida",
     "successTitle": "Paskyra sėkmingai sukurta",
-"successWelcome": "Sveiki atvykę į OLAKRED.",
+"successWelcome": "Sveiki atvykę į HADI SOCIAL.",
 "successBody": "Sveikiname, jūsų paskyra sėkmingai užregistruota mūsų sistemoje.",
 "successRedirect": "Po",
 "successSecond": "sekundės",
@@ -31,7 +31,7 @@
     "errorGeneric": "Klaida"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Prisijungimas",
     "description": "Prisijunkite prie savo banko sąskaitos.",
     "email": "El. paštas",

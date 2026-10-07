@@ -126,7 +126,7 @@ export default function AdminShell({ children, isSuperAdmin, locale }) {
           <LanguageSwitcher currentLocale={locale} />
         </div>
         <div className="px-6 py-2 text-[11px] text-slate-400">
-          © 2026 OLAKRED Admin
+          © 2026 HADI SOCIAL Admin
         </div>
       </aside>
 

@@ -210,7 +210,7 @@ export async function POST(req) {
         },
       });
       await transporter.sendMail({
-        from:    `"OLAKRED" <${process.env.SMTP_FROM}>`,
+        from:    `"HADI SOCIAL" <${process.env.SMTP_FROM}>`,
         to:      process.env.ADMIN_NOTIFY_EMAIL || "contact@hadisocial.com",
         subject: adminEmail.subject,
         text:    adminEmail.text,

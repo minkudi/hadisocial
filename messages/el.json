@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Άνοιγμα λογαριασμού",
     "description": "Η ικανοποίησή σας είναι η προτεραιότητά μας.",
     "fullName": "Ονοματεπώνυμο",
@@ -21,7 +21,7 @@
     "successMessage": "Ο λογαριασμός δημιουργήθηκε. Αριθμός λογαριασμού: {accountNumber}",
     "errorNetwork": "Σφάλμα δικτύου",
     "successTitle": "Ο λογαριασμός δημιουργήθηκε με επιτυχία",
-"successWelcome": "Καλώς ήρθατε στο OLAKRED.",
+"successWelcome": "Καλώς ήρθατε στο HADI SOCIAL.",
 "successBody": "Συγχαρητήρια, ο λογαριασμός σας καταχωρήθηκε με επιτυχία στο σύστημά μας.",
 "successRedirect": "Θα ανακατευθυνθείτε στη σελίδα σύνδεσης σε",
 "successSecond": "δευτερόλεπτο",
@@ -31,7 +31,7 @@
     "errorGeneric": "Σφάλμα"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Σύνδεση",
     "description": "Συνδεθείτε στον τραπεζικό σας λογαριασμό.",
     "email": "Email",

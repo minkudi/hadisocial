@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Konta atvēršana",
     "description": "Jūsų pasitenkinimas yra mūsų prioritetas.",
     "fullName": "Vārds un uzvārds",
@@ -21,7 +21,7 @@
     "successMessage": "Konts izveidots. Konta numurs: {accountNumber}",
     "errorNetwork": "Tīkla kļūda",
     "successTitle": "Konts veiksmīgi izveidots",
-"successWelcome": "Laipni lūdzam OLAKRED.",
+"successWelcome": "Laipni lūdzam HADI SOCIAL.",
 "successBody": "Apsveicam, jūsu konts ir veiksmīgi reģistrēts mūsu sistēmā.",
 "successRedirect": "Jūs tiksiet novirzīts uz pieteikšanās lapu pēc",
 "successSecond": "sekundes",
@@ -31,7 +31,7 @@
     "errorGeneric": "Kļūda"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Pieteikšanās",
     "description": "Piesakieties savam bankas kontam.",
     "email": "E‑pasts",

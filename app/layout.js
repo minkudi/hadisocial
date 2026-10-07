@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Bank Group",
-  description: "OLAKRED",
+  description: "HADI SOCIAL",
 };
 
 export default function RootLayout({ children }) {

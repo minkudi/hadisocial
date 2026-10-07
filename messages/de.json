@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Kontoeröffnung",
     "description": "Ihre Zufriedenheit ist unsere Priorität.",
     "fullName": "Vollständiger Name",
@@ -21,7 +21,7 @@
     "successMessage": "Konto erstellt. Kontonummer: {accountNumber}",
     "errorNetwork": "Netzwerkfehler",
     "successTitle": "Konto erfolgreich erstellt",
-    "successWelcome": "Willkommen bei OLAKRED.",
+    "successWelcome": "Willkommen bei HADI SOCIAL.",
     "successBody": "Herzlichen Glückwunsch, Ihr Konto wurde erfolgreich in unserem System registriert.",
     "successRedirect": "Sie werden in",
     "successSecond": "Sekunde",
@@ -31,7 +31,7 @@
     "errorGeneric": "Fehler"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Anmeldung",
     "description": "Greifen Sie auf Ihr Bankkonto zu.",
     "email": "E‑Mail",

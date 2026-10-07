@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Rekening openen",
     "description": "Uw tevredenheid is onze prioriteit.",
     "fullName": "Volledige naam",
@@ -21,7 +21,7 @@
     "successMessage": "Rekening aangemaakt. Rekeningnummer: {accountNumber}",
     "errorNetwork": "Netwerkfout",
     "successTitle": "Account succesvol aangemaakt",
-    "successWelcome": "Welkom bij OLAKRED.",
+    "successWelcome": "Welkom bij HADI SOCIAL.",
     "successBody": "Gefeliciteerd, uw account is succesvol geregistreerd in ons systeem.",
     "successRedirect": "U wordt over",
     "successSecond": "seconde",
@@ -31,7 +31,7 @@
     "errorGeneric": "Fout"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Inloggen",
     "description": "Log in op uw bankrekening.",
     "email": "E‑mail",

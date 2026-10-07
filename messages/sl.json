@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Odprtje računa",
     "description": "Vaše zadovoljstvo je naša prednostna naloga.",
     "fullName": "Ime in priimek",
@@ -21,7 +21,7 @@
     "successMessage": "Račun je bil ustvarjen. Številka računa: {accountNumber}",
     "errorNetwork": "Napaka omrežja",
     "successTitle": "Račun uspešno ustvarjen",
-    "successWelcome": "Dobrodošli v OLAKRED.",
+    "successWelcome": "Dobrodošli v HADI SOCIAL.",
     "successBody": "Čestitamo, vaš račun je bil uspešno registriran v našem sistemu.",
     "successRedirect": "Preusmerjeni boste na stran za prijavo čez",
     "successSecond": "sekundo",
@@ -31,7 +31,7 @@
     "errorGeneric": "Napaka"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Prijava",
     "description": "Prijavite se v svoj bančni račun.",
     "email": "E‑pošta",

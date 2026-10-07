@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Otvorenie účtu",
     "description": "Vaša spokojnosť je našou prioritou.",
     "fullName": "Meno a priezvisko",
@@ -21,7 +21,7 @@
     "successMessage": "Účet bol vytvorený. Číslo účtu: {accountNumber}",
     "errorNetwork": "Chyba siete",
     "successTitle": "Účet bol úspešne vytvorený",
-    "successWelcome": "Vitajte v OLAKRED.",
+    "successWelcome": "Vitajte v HADI SOCIAL.",
     "successBody": "Gratulujeme, váš účet bol úspešne zaregistrovaný v našom systéme.",
     "successRedirect": "Budete presmerovaní na prihlasovaciu stránku o",
     "successSecond": "sekundu",
@@ -31,7 +31,7 @@
     "errorGeneric": "Chyba"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Prihlásenie",
     "description": "Prihláste sa do svojho bankového účtu.",
     "email": "E-mail",

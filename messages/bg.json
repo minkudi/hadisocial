@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Откриване на сметка",
     "description": "Вашето удовлетворение е наш приоритет.",
     "fullName": "Пълно име",
@@ -21,7 +21,7 @@
     "successMessage": "Сметката е създадена. Номер на сметка: {accountNumber}",
     "errorNetwork": "Грешка в мрежата",
     "successTitle": "Акаунтът е създаден успешно",
-    "successWelcome": "Добре дошли в OLAKRED.",
+    "successWelcome": "Добре дошли в HADI SOCIAL.",
     "successBody": "Поздравления, вашият акаунт беше успешно регистриран в нашата система.",
     "successRedirect": "Ще бъдете пренасочени към страницата за вход след",
     "successSecond": "секунда",
@@ -31,7 +31,7 @@
     "errorGeneric": "Грешка"
   },
   "login": {
-    "subtitle": "OLAKRED",
+    "subtitle": "HADI SOCIAL",
     "title": "Вход",
     "description": "Влезте във вашата банкова сметка.",
     "email": "Имейл",
