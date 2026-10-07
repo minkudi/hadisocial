@@ -60,9 +60,7 @@ export default function AdminShell({ children, isSuperAdmin, locale }) {
       <aside className="hidden lg:flex lg:flex-col w-64 bg-white border-r border-gray-200">
         <div className="h-16 px-6 flex items-center">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-2xl bg-gradient-to-tr from-rose-500 to-orange-500 flex items-center justify-center text-white">
-              <span className="text-[18px] font-bold">BK</span>
-            </div>
+            <img src="/logo.svg" alt="HADI SOCIAL" className="h-9 w-9" />
             <div className="flex flex-col">
               <span className="text-sm font-semibold text-slate-900 tracking-tight">
                 Admin Panel

@@ -58,6 +58,12 @@ export default function LoginPage() {
             <div className="w-full xl:w-1/2">
               <div className="w-full p-8 sm:p-12 xl:p-16">
                 <div className="mb-9">
+                  <div className="mb-6 flex items-center gap-3">
+                    <img src="/logo.svg" alt="HADI SOCIAL" className="h-12 w-12" />
+                    <span className="text-xl font-bold tracking-tight text-[#1c2434]">
+                      HADI SOCIAL
+                    </span>
+                  </div>
                   <h2 className="mb-3 text-3xl font-bold text-[#1c2434]">
                     {t('title')}
                   </h2>
@@ -143,6 +149,11 @@ export default function LoginPage() {
                     {t('welcomeDescription')}
                   </p>
                 </div>
+                <img
+                  src="/auth-illustration.svg"
+                  alt=""
+                  className="w-full max-w-[420px] mx-auto"
+                />
               </div>
             </div>
 
