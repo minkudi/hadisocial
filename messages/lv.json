@@ -21,14 +21,16 @@
     "successMessage": "Konts izveidots. Konta numurs: {accountNumber}",
     "errorNetwork": "Tīkla kļūda",
     "successTitle": "Konts veiksmīgi izveidots",
-"successWelcome": "Laipni lūdzam HADI SOCIAL.",
-"successBody": "Apsveicam, jūsu konts ir veiksmīgi reģistrēts mūsu sistēmā.",
-"successRedirect": "Jūs tiksiet novirzīts uz pieteikšanās lapu pēc",
-"successSecond": "sekundes",
-"successSeconds": "sekundēm",
-"successManual": "Ja novirzīšana nenotiek automātiski, varat turpināt manuāli.",
-"successButton": "Doties uz pieteikšanos tagad",
-    "errorGeneric": "Kļūda"
+    "successWelcome": "Laipni lūdzam HADI SOCIAL.",
+    "successBody": "Apsveicam, jūsu konts ir veiksmīgi reģistrēts mūsu sistēmā.",
+    "successRedirect": "Jūs tiksiet novirzīts uz pieteikšanās lapu pēc",
+    "successSecond": "sekundes",
+    "successSeconds": "sekundēm",
+    "successManual": "Ja novirzīšana nenotiek automātiski, varat turpināt manuāli.",
+    "successButton": "Doties uz pieteikšanos tagad",
+    "errorGeneric": "Kļūda",
+    "hasAccount": "Jums jau ir konts?",
+    "loginLink": "Pieteikties"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Vēl nav konta?",
     "register": "Reģistrēties",
     "errorGeneric": "Kļūda",
-    "errorNetwork": "Tīkla kļūda"
+    "errorNetwork": "Tīkla kļūda",
+    "welcome": "Laipni lūdzam!",
+    "welcomeDescription": "Pierakstieties, lai piekļūtu savai drošajai bankas zonai."
   },
   "dashboard": {
     "loading": "Notiek ielāde…",
@@ -142,4 +146,3 @@
     }
   }
 }
-  

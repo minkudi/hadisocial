@@ -28,7 +28,9 @@
     "successSeconds": "sekund",
     "successManual": "Če preusmeritev ne poteka samodejno, lahko nadaljujete ročno.",
     "successButton": "Pojdi na prijavo zdaj",
-    "errorGeneric": "Napaka"
+    "errorGeneric": "Napaka",
+    "hasAccount": "Že imate račun?",
+    "loginLink": "Prijava"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Še nimate računa?",
     "register": "Registracija",
     "errorGeneric": "Napaka",
-    "errorNetwork": "Napaka omrežja"
+    "errorNetwork": "Napaka omrežja",
+    "welcome": "Dobrodošli!",
+    "welcomeDescription": "Prijavite se za dostop do varnega bančnega prostora."
   },
   "dashboard": {
     "loading": "Nalaganje…",

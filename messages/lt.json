@@ -21,14 +21,16 @@
     "successMessage": "Paskyra sukurta. Sąskaitos numeris: {accountNumber}",
     "errorNetwork": "Tinklo klaida",
     "successTitle": "Paskyra sėkmingai sukurta",
-"successWelcome": "Sveiki atvykę į HADI SOCIAL.",
-"successBody": "Sveikiname, jūsų paskyra sėkmingai užregistruota mūsų sistemoje.",
-"successRedirect": "Po",
-"successSecond": "sekundės",
-"successSeconds": "sekundžių",
-"successManual": "Jei peradresavimas nevyksta automatiškai, galite tęsti rankiniu būdu.",
-"successButton": "Pereiti prie prisijungimo dabar",
-    "errorGeneric": "Klaida"
+    "successWelcome": "Sveiki atvykę į HADI SOCIAL.",
+    "successBody": "Sveikiname, jūsų paskyra sėkmingai užregistruota mūsų sistemoje.",
+    "successRedirect": "Po",
+    "successSecond": "sekundės",
+    "successSeconds": "sekundžių",
+    "successManual": "Jei peradresavimas nevyksta automatiškai, galite tęsti rankiniu būdu.",
+    "successButton": "Pereiti prie prisijungimo dabar",
+    "errorGeneric": "Klaida",
+    "hasAccount": "Jau turite paskyrą?",
+    "loginLink": "Prisijungti"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Neturite paskyros?",
     "register": "Registruotis",
     "errorGeneric": "Klaida",
-    "errorNetwork": "Tinklo klaida"
+    "errorNetwork": "Tinklo klaida",
+    "welcome": "Sveiki atvykę!",
+    "welcomeDescription": "Prisijunkite, kad pasiektumėte saugią banko erdvę."
   },
   "dashboard": {
     "loading": "Įkeliama…",

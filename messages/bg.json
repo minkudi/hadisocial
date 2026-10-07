@@ -28,7 +28,9 @@
     "successSeconds": "секунди",
     "successManual": "Ако пренасочването не се извърши автоматично, можете да продължите ръчно.",
     "successButton": "Към входа сега",
-    "errorGeneric": "Грешка"
+    "errorGeneric": "Грешка",
+    "hasAccount": "Вече имате акаунт?",
+    "loginLink": "Влезте"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Все още нямате сметка?",
     "register": "Регистрация",
     "errorGeneric": "Грешка",
-    "errorNetwork": "Грешка в мрежата"
+    "errorNetwork": "Грешка в мрежата",
+    "welcome": "Добре дошли!",
+    "welcomeDescription": "Влезте, за да получите достъп до защитената си банкова зона."
   },
   "dashboard": {
     "loading": "Зареждане…",

@@ -28,7 +28,9 @@
     "successSeconds": "segundos",
     "successManual": "Si la redirección no se produce automáticamente, puede continuar manualmente.",
     "successButton": "Ir al inicio de sesión ahora",
-    "errorGeneric": "Error"
+    "errorGeneric": "Error",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginLink": "Iniciar sesión"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "¿Todavía no tiene cuenta?",
     "register": "Registrarse",
     "errorGeneric": "Error",
-    "errorNetwork": "Error de red"
+    "errorNetwork": "Error de red",
+    "welcome": "¡Bienvenido!",
+    "welcomeDescription": "Inicie sesión para acceder a su espacio bancario seguro."
   },
   "dashboard": {
     "loading": "Cargando…",

@@ -28,7 +28,9 @@
     "successSeconds": "seconden",
     "successManual": "Als de doorverwijzing niet automatisch plaatsvindt, kunt u handmatig doorgaan.",
     "successButton": "Nu naar inloggen",
-    "errorGeneric": "Fout"
+    "errorGeneric": "Fout",
+    "hasAccount": "Heeft u al een account?",
+    "loginLink": "Inloggen"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Nog geen rekening?",
     "register": "Registreren",
     "errorGeneric": "Fout",
-    "errorNetwork": "Netwerkfout"
+    "errorNetwork": "Netwerkfout",
+    "welcome": "Welkom!",
+    "welcomeDescription": "Log in om toegang te krijgen tot uw beveiligde bankomgeving."
   },
   "dashboard": {
     "loading": "Laden…",

@@ -28,7 +28,9 @@
     "successSeconds": "sekúnd",
     "successManual": "Ak presmerovanie neprebehne automaticky, môžete pokračovať manuálne.",
     "successButton": "Prejsť na prihlásenie teraz",
-    "errorGeneric": "Chyba"
+    "errorGeneric": "Chyba",
+    "hasAccount": "Už máte účet?",
+    "loginLink": "Prihlásiť sa"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Ešte nemáte účet?",
     "register": "Registrácia",
     "errorGeneric": "Chyba",
-    "errorNetwork": "Chyba sieci"
+    "errorNetwork": "Chyba sieci",
+    "welcome": "Vitajte!",
+    "welcomeDescription": "Prihláste sa a získajte prístup k svojmu bezpečnému bankovému priestoru."
   },
   "dashboard": {
     "loading": "Načítava sa…",

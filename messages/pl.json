@@ -28,7 +28,9 @@
     "successSeconds": "sekund",
     "successManual": "Jeśli przekierowanie nie nastąpi automatycznie, możesz kontynuować ręcznie.",
     "successButton": "Przejdź do logowania teraz",
-    "errorGeneric": "Błąd"
+    "errorGeneric": "Błąd",
+    "hasAccount": "Masz już konto?",
+    "loginLink": "Zaloguj się"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Nie masz jeszcze konta?",
     "register": "Zarejestruj się",
     "errorGeneric": "Błąd",
-    "errorNetwork": "Błąd sieci"
+    "errorNetwork": "Błąd sieci",
+    "welcome": "Witamy!",
+    "welcomeDescription": "Zaloguj się, aby uzyskać dostęp do bezpiecznej strefy bankowej."
   },
   "dashboard": {
     "loading": "Ładowanie…",

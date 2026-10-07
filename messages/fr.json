@@ -20,15 +20,17 @@
     "submitting": "Création du compte…",
     "successMessage": "Compte créé. Numéro de compte : {accountNumber}",
     "errorNetwork": "Erreur réseau",
-      "successTitle": "Compte créé avec succès",
-  "successWelcome": "Bienvenue dans HADI SOCIAL.",
-  "successBody": "Félicitations, votre compte a été enregistré avec succès dans notre système.",
-  "successRedirect": "Vous allez être redirigé vers la page de connexion dans",
-  "successSecond": "seconde",
-  "successSeconds": "secondes",
-  "successManual": "Si la redirection ne se fait pas automatiquement, vous pouvez continuer manuellement.",
-  "successButton": "Aller à la connexion maintenant",
-    "errorGeneric": "Erreur"
+    "successTitle": "Compte créé avec succès",
+    "successWelcome": "Bienvenue dans HADI SOCIAL.",
+    "successBody": "Félicitations, votre compte a été enregistré avec succès dans notre système.",
+    "successRedirect": "Vous allez être redirigé vers la page de connexion dans",
+    "successSecond": "seconde",
+    "successSeconds": "secondes",
+    "successManual": "Si la redirection ne se fait pas automatiquement, vous pouvez continuer manuellement.",
+    "successButton": "Aller à la connexion maintenant",
+    "errorGeneric": "Erreur",
+    "hasAccount": "Déjà un compte ?",
+    "loginLink": "Se connecter"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Pas encore de compte ?",
     "register": "S'inscrire",
     "errorGeneric": "Erreur",
-    "errorNetwork": "Erreur réseau"
+    "errorNetwork": "Erreur réseau",
+    "welcome": "Bienvenue !",
+    "welcomeDescription": "Connectez-vous pour accéder à votre espace bancaire sécurisé."
   },
   "dashboard": {
     "loading": "Chargement…",
@@ -103,20 +107,19 @@
       "sendingSms": "Envoi du SMS…",
       "invalidNumber": "Numéro de carte invalide.",
       "invalidExpiry": "Date d'expiration invalide."
-
     }
   },
   "transactions": {
-  "title": "Historique des transactions",
-  "subtitle": "Suivez l’ensemble des mouvements sur votre compte",
-  "table": {
-    "date": "Date",
-    "beneficiary": "Bénéficiaire",
-    "type": "Type",
-    "amount": "Montant",
-    "operations": "Opérations"
-  }
-},
+    "title": "Historique des transactions",
+    "subtitle": "Suivez l’ensemble des mouvements sur votre compte",
+    "table": {
+      "date": "Date",
+      "beneficiary": "Bénéficiaire",
+      "type": "Type",
+      "amount": "Montant",
+      "operations": "Opérations"
+    }
+  },
   "profile": {
     "title": "Profil",
     "subtitle": "Gérez vos informations personnelles et vos préférences",

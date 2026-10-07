@@ -305,12 +305,12 @@ export default function RegisterPage() {
 
               <div className="text-center mt-4">
                 <p className="text-base text-[#64748b]">
-                  Déjà un compte?{' '}
+                  {t('hasAccount')}{' '}
                   <Link
                     href={`/${locale}/login`}
                     className="text-[#3c50e0] hover:underline font-medium"
                   >
-                    Se connecter
+                    {t('loginLink')}
                   </Link>
                 </p>
               </div>

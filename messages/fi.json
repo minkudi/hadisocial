@@ -28,7 +28,9 @@
     "successSeconds": "sekunnin",
     "successManual": "Jos uudelleenohjaus ei tapahdu automaattisesti, voit jatkaa manuaalisesti.",
     "successButton": "Siirry kirjautumiseen nyt",
-    "errorGeneric": "Virhe"
+    "errorGeneric": "Virhe",
+    "hasAccount": "Onko sinulla jo tili?",
+    "loginLink": "Kirjaudu sisään"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Ei vielä tiliä?",
     "register": "Rekisteröidy",
     "errorGeneric": "Virhe",
-    "errorNetwork": "Verkkovirhe"
+    "errorNetwork": "Verkkovirhe",
+    "welcome": "Tervetuloa!",
+    "welcomeDescription": "Kirjaudu sisään päästäksesi turvalliseen pankkitilaasi."
   },
   "dashboard": {
     "loading": "Ladataan…",

@@ -28,7 +28,9 @@
     "successSeconds": "seconds",
     "successManual": "If the redirect does not happen automatically, you can continue manually.",
     "successButton": "Go to login now",
-    "errorGeneric": "Error"
+    "errorGeneric": "Error",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Log in"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "No account yet?",
     "register": "Sign up",
     "errorGeneric": "Error",
-    "errorNetwork": "Network error"
+    "errorNetwork": "Network error",
+    "welcome": "Welcome!",
+    "welcomeDescription": "Log in to access your secure banking area."
   },
   "dashboard": {
     "loading": "Loading…",

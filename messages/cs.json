@@ -21,15 +21,16 @@
     "successMessage": "Účet byl vytvořen. Číslo účtu: {accountNumber}",
     "errorNetwork": "Chyba sítě",
     "successTitle": "Účet byl úspěšně vytvořen",
-"successWelcome": "Vítejte v HADI SOCIAL.",
-"successBody": "Gratulujeme, váš účet byl úspěšně zaregistrován v našem systému.",
-"successRedirect": "Budete přesměrováni na přihlašovací stránku za",
-"successSecond": "sekundu",
-"successSeconds": "sekund",
-"successManual": "Pokud přesměrování neproběhne automaticky, můžete pokračovat ručně.",
-"successButton": "Přejít na přihlášení nyní",
-
-    "errorGeneric": "Chyba"
+    "successWelcome": "Vítejte v HADI SOCIAL.",
+    "successBody": "Gratulujeme, váš účet byl úspěšně zaregistrován v našem systému.",
+    "successRedirect": "Budete přesměrováni na přihlašovací stránku za",
+    "successSecond": "sekundu",
+    "successSeconds": "sekund",
+    "successManual": "Pokud přesměrování neproběhne automaticky, můžete pokračovat ručně.",
+    "successButton": "Přejít na přihlášení nyní",
+    "errorGeneric": "Chyba",
+    "hasAccount": "Už máte účet?",
+    "loginLink": "Přihlásit se"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -44,7 +45,9 @@
     "noAccount": "Ještě nemáte účet?",
     "register": "Zaregistrovat se",
     "errorGeneric": "Chyba",
-    "errorNetwork": "Chyba sítě"
+    "errorNetwork": "Chyba sítě",
+    "welcome": "Vítejte!",
+    "welcomeDescription": "Přihlaste se a získejte přístup ke svému zabezpečenému bankovnímu prostoru."
   },
   "dashboard": {
     "loading": "Načítání…",

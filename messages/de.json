@@ -28,7 +28,9 @@
     "successSeconds": "Sekunden",
     "successManual": "Falls die Weiterleitung nicht automatisch erfolgt, können Sie manuell fortfahren.",
     "successButton": "Jetzt zur Anmeldung",
-    "errorGeneric": "Fehler"
+    "errorGeneric": "Fehler",
+    "hasAccount": "Haben Sie bereits ein Konto?",
+    "loginLink": "Anmelden"
   },
   "login": {
     "subtitle": "HADI SOCIAL",
@@ -43,7 +45,9 @@
     "noAccount": "Noch kein Konto?",
     "register": "Registrieren",
     "errorGeneric": "Fehler",
-    "errorNetwork": "Netzwerkfehler"
+    "errorNetwork": "Netzwerkfehler",
+    "welcome": "Willkommen!",
+    "welcomeDescription": "Melden Sie sich an, um auf Ihren sicheren Bankbereich zuzugreifen."
   },
   "dashboard": {
     "loading": "Laden…",

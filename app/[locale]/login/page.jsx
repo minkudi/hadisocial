@@ -137,10 +137,10 @@ export default function LoginPage() {
                     {t('subtitle')}
                   </h3>
                   <h1 className="mb-4 text-4xl font-bold text-[#1c2434]">
-                    Bienvenue!
+                    {t('welcome')}
                   </h1>
                   <p className="max-w-md text-lg text-[#64748b]">
-                    Connectez-vous pour accéder à votre espace bancaire sécurisé.
+                    {t('welcomeDescription')}
                   </p>
                 </div>
               </div>
