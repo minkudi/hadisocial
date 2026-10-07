@@ -125,6 +125,16 @@ export default function RegisterPage() {
     <main className="min-h-screen flex items-center justify-center bg-[#f1f5f9] py-8">
       <div className="w-full max-w-[600px] mx-auto px-4">
         <div className="rounded-xl bg-white shadow-lg overflow-hidden">
+          {/* Bannière photo */}
+          <div className="relative h-44 sm:h-52 w-full">
+            <img
+              src="/auth-register.jpg"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-[#1c2434]/35" />
+          </div>
+
           <div className="w-full p-8 sm:p-12">
             {/* Titre */}
             <div className="mb-9 text-center sm:text-left">

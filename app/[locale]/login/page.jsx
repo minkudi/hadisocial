@@ -136,24 +136,23 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <div className="hidden w-full xl:block xl:w-1/2 bg-gradient-to-br from-[#3c50e0]/10 to-[#3c50e0]/5">
-              <div className="flex h-full flex-col justify-center px-12 py-16">
-                <div className="mb-10">
-                  <h3 className="mb-3 text-2xl font-bold text-[#1c2434]">
-                    {t('subtitle')}
-                  </h3>
-                  <h1 className="mb-4 text-4xl font-bold text-[#1c2434]">
-                    {t('welcome')}
-                  </h1>
-                  <p className="max-w-md text-lg text-[#64748b]">
-                    {t('welcomeDescription')}
-                  </p>
-                </div>
-                <img
-                  src="/auth-illustration.svg"
-                  alt=""
-                  className="w-full max-w-[420px] mx-auto"
-                />
+            <div className="relative hidden w-full xl:block xl:w-1/2">
+              <img
+                src="/auth-login.jpg"
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1c2434]/95 via-[#1c2434]/45 to-[#1c2434]/10" />
+              <div className="relative z-10 flex h-full flex-col justify-end px-12 pb-14">
+                <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-white/70">
+                  {t('subtitle')}
+                </p>
+                <h1 className="mb-4 text-4xl font-bold text-white">
+                  {t('welcome')}
+                </h1>
+                <p className="max-w-md text-lg text-white/85">
+                  {t('welcomeDescription')}
+                </p>
               </div>
             </div>
 
