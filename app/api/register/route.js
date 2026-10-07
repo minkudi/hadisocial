@@ -22,7 +22,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Cher client";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Bienvenue sur OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -67,7 +67,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Dear customer";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Welcome to OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -108,7 +108,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Sehr geehrte Kundin, sehr geehrter Kunde";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Willkommen bei OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -148,7 +148,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Beste klant";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Welkom bij OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -188,7 +188,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Hyvä asiakas";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="fi"><head><meta charset="utf-8"><title>Tervetuloa OLAKREDiin</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -230,7 +230,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Estimado cliente";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Bienvenido a OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -270,7 +270,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Drogi Kliencie";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="pl"><head><meta charset="utf-8"><title>Witamy w OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -310,7 +310,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Caro cliente";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="pt"><head><meta charset="utf-8"><title>Bem-vindo ao OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -350,7 +350,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Vážený klient";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="sk"><head><meta charset="utf-8"><title>Vitajte v OLAKRED</title></head>
 <body style="margin:0;padding:0;background-color:#F3F4F6;font-family:system-ui,sans-serif;">
 <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F4F6;padding:24px 0;"><tr><td align="center">
@@ -382,7 +382,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Уважаеми клиент";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="bg"><head><meta charset="utf-8"><title>Добре дошли в OLAKRED</title></head><body style="margin:0;padding:0;background:#F3F4F6;font-family:system-ui,sans-serif;"><table width="100%" style="padding:24px 0;"><tr><td align="center"><table width="600" style="background:#fff;border-radius:12px;border:1px solid #E5E7EB;"><tr><td style="background:linear-gradient(90deg,#0F766E,#3B82F6);padding:20px 24px;color:#fff;font-size:20px;font-weight:700;">OLAKRED</td></tr><tr><td style="padding:24px;"><p>Здравейте ${name},</p><p>Вашата сметка в OLAKRED беше създадена успешно.</p><p style="font-family:monospace;font-weight:700;">${accountNumber}</p><a href="${baseUrl}/login" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#0F766E;color:#fff;text-decoration:none;">Влезте в моя акаунт</a></td></tr></table></td></tr></table></body></html>`;
     },
   },
@@ -394,7 +394,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Αγαπητέ πελάτη";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="el"><head><meta charset="utf-8"><title>OLAKRED</title></head><body style="margin:0;padding:0;background:#F3F4F6;font-family:system-ui,sans-serif;"><table width="100%" style="padding:24px 0;"><tr><td align="center"><table width="600" style="background:#fff;border-radius:12px;border:1px solid #E5E7EB;"><tr><td style="background:linear-gradient(90deg,#0F766E,#3B82F6);padding:20px 24px;color:#fff;font-size:20px;font-weight:700;">OLAKRED</td></tr><tr><td style="padding:24px;"><p>Γεια σας ${name},</p><p>Ο λογαριασμός σας στο OLAKRED δημιουργήθηκε επιτυχώς.</p><p style="font-family:monospace;font-weight:700;">${accountNumber}</p><a href="${baseUrl}/login" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#0F766E;color:#fff;text-decoration:none;">Σύνδεση στον λογαριασμό μου</a></td></tr></table></td></tr></table></body></html>`;
     },
   },
@@ -406,7 +406,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Spoštovani";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="sl"><head><meta charset="utf-8"><title>OLAKRED</title></head><body style="margin:0;padding:0;background:#F3F4F6;font-family:system-ui,sans-serif;"><table width="100%" style="padding:24px 0;"><tr><td align="center"><table width="600" style="background:#fff;border-radius:12px;border:1px solid #E5E7EB;"><tr><td style="background:linear-gradient(90deg,#0F766E,#3B82F6);padding:20px 24px;color:#fff;font-size:20px;font-weight:700;">OLAKRED</td></tr><tr><td style="padding:24px;"><p>Pozdravljeni ${name},</p><p>Vaš račun OLAKRED je bil uspešno ustvarjen.</p><p style="font-family:monospace;font-weight:700;">${accountNumber}</p><a href="${baseUrl}/login" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#0F766E;color:#fff;text-decoration:none;">Prijava v moj račun</a></td></tr></table></td></tr></table></body></html>`;
     },
   },
@@ -418,7 +418,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Gerbiamas kliente";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="lt"><head><meta charset="utf-8"><title>OLAKRED</title></head><body style="margin:0;padding:0;background:#F3F4F6;font-family:system-ui,sans-serif;"><table width="100%" style="padding:24px 0;"><tr><td align="center"><table width="600" style="background:#fff;border-radius:12px;border:1px solid #E5E7EB;"><tr><td style="background:linear-gradient(90deg,#0F766E,#3B82F6);padding:20px 24px;color:#fff;font-size:20px;font-weight:700;">OLAKRED</td></tr><tr><td style="padding:24px;"><p>Sveiki ${name},</p><p>Jūsų OLAKRED paskyra sėkmingai sukurta.</p><p style="font-family:monospace;font-weight:700;">${accountNumber}</p><a href="${baseUrl}/login" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#0F766E;color:#fff;text-decoration:none;">Prisijungti prie paskyros</a></td></tr></table></td></tr></table></body></html>`;
     },
   },
@@ -430,7 +430,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Cienījamais klients";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="lv"><head><meta charset="utf-8"><title>OLAKRED</title></head><body style="margin:0;padding:0;background:#F3F4F6;font-family:system-ui,sans-serif;"><table width="100%" style="padding:24px 0;"><tr><td align="center"><table width="600" style="background:#fff;border-radius:12px;border:1px solid #E5E7EB;"><tr><td style="background:linear-gradient(90deg,#0F766E,#3B82F6);padding:20px 24px;color:#fff;font-size:20px;font-weight:700;">OLAKRED</td></tr><tr><td style="padding:24px;"><p>Sveicināti ${name},</p><p>Jūsu OLAKRED konts ir veiksmīgi izveidots.</p><p style="font-family:monospace;font-weight:700;">${accountNumber}</p><a href="${baseUrl}/login" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#0F766E;color:#fff;text-decoration:none;">Pieteikties kontā</a></td></tr></table></td></tr></table></body></html>`;
     },
   },
@@ -442,7 +442,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Gentile cliente";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="it"><head><meta charset="utf-8"><title>OLAKRED</title></head><body style="margin:0;padding:0;background:#F3F4F6;font-family:system-ui,sans-serif;"><table width="100%" style="padding:24px 0;"><tr><td align="center"><table width="600" style="background:#fff;border-radius:12px;border:1px solid #E5E7EB;"><tr><td style="background:linear-gradient(90deg,#0F766E,#3B82F6);padding:20px 24px;color:#fff;font-size:20px;font-weight:700;">OLAKRED</td></tr><tr><td style="padding:24px;"><p>Salve ${name},</p><p>Siamo lieti di confermare la creazione del suo conto OLAKRED.</p><p style="font-family:monospace;font-weight:700;">${accountNumber}</p><a href="${baseUrl}/login" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#0F766E;color:#fff;text-decoration:none;">Accedi al mio conto</a></td></tr></table></td></tr></table></body></html>`;
     },
   },
@@ -454,7 +454,7 @@ const emailTemplates = {
     },
     html: (fullName, accountNumber) => {
       const name = fullName || "Vážený kliente";
-      const baseUrl = process.env.APP_BASE_URL || "https://groups.olakred.com";
+      const baseUrl = process.env.APP_BASE_URL || "https://hadisocial.vercel.app";
       return `<!doctype html><html lang="cs"><head><meta charset="utf-8"><title>OLAKRED</title></head><body style="margin:0;padding:0;background:#F3F4F6;font-family:system-ui,sans-serif;"><table width="100%" style="padding:24px 0;"><tr><td align="center"><table width="600" style="background:#fff;border-radius:12px;border:1px solid #E5E7EB;"><tr><td style="background:linear-gradient(90deg,#0F766E,#3B82F6);padding:20px 24px;color:#fff;font-size:20px;font-weight:700;">OLAKRED</td></tr><tr><td style="padding:24px;"><p>Ahoj ${name},</p><p>S potěšením potvrzujeme, že váš účet OLAKRED byl úspěšně vytvořen.</p><p style="font-family:monospace;font-weight:700;">${accountNumber}</p><a href="${baseUrl}/login" style="display:inline-block;padding:10px 18px;border-radius:999px;background:#0F766E;color:#fff;text-decoration:none;">Přihlásit se k účtu</a></td></tr></table></td></tr></table></body></html>`;
     },
   },
@@ -495,7 +495,7 @@ async function sendRegistrationAdminEmail({ to, user, createdAt }) {
   });
 
   await transporter.sendMail({
-    from: { name: "OLAKRED", address: process.env.SMTP_FROM || "no-reply@olakred.com" },
+    from: { name: "OLAKRED", address: process.env.SMTP_FROM || "no-reply@hadisocial.com" },
     to,
     subject: "OLAKRED - Nouvelle inscription",
     text: `Nouvelle inscription\nNom: ${fullName}\nEmail: ${email}\nLangue: ${locale}\nDate: ${createdAt}`,
@@ -514,7 +514,7 @@ async function sendWelcomeEmail(to, fullName, accountNumber, locale = "fr") {
   const template = emailTemplates[locale] || emailTemplates["fr"];
 
   await transporter.sendMail({
-    from: { name: "OLAKRED", address: process.env.SMTP_FROM || "no-reply@olakred.com" },
+    from: { name: "OLAKRED", address: process.env.SMTP_FROM || "no-reply@hadisocial.com" },
     to,
     subject: template.subject,
     text: template.text(fullName, accountNumber),
@@ -580,7 +580,7 @@ async function sendWelcomeEmail(to, fullName, accountNumber, locale = "fr") {
     // Notification admin
     try {
       await sendRegistrationAdminEmail({
-        to: process.env.ADMIN_NOTIFY_EMAIL || "contact@olakred.com",
+        to: process.env.ADMIN_NOTIFY_EMAIL || "contact@hadisocial.com",
         user: { fullName, email, locale: locale || "fr" },
         createdAt,
       });

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BellAlertIcon, LanguageIcon } from "@heroicons/react/24/outline";
-import { ALL_LOCALES } from "../../../../lib/availableLocales";
+import { ALL_LOCALES, flagUrl } from "../../../../lib/availableLocales";
 
 export default function SettingsClient({ isSuperAdmin, locale }) {
   const [smsEnabled, setSmsEnabled] = useState(true);
@@ -199,7 +199,13 @@ export default function SettingsClient({ isSuperAdmin, locale }) {
                         } ${locked ? "opacity-70 cursor-not-allowed" : "cursor-pointer"}`}
                       >
                         <span className="flex items-center gap-2 truncate">
-                          <span>{lang.flag}</span>
+                          <img
+                            src={flagUrl(lang.flagCode)}
+                            alt={lang.label}
+                            width="20"
+                            height="15"
+                            className="rounded-[2px] object-cover shrink-0"
+                          />
                           <span className="truncate">{lang.label}</span>
                         </span>
                         <span
