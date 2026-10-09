@@ -139,9 +139,9 @@ export default function RegisterPage() {
             {/* Titre */}
             <div className="mb-9 text-center sm:text-left">
               <div className="mb-6 flex items-center justify-center sm:justify-start gap-3">
-                <img src="/logo.svg" alt="HADI SOCIAL" className="h-12 w-12" />
+                <img src="/logo.svg" alt="SCAP BEN" className="h-12 w-12" />
                 <span className="text-xl font-bold tracking-tight text-[#1c2434]">
-                  HADI SOCIAL
+                  SCAP BEN
                 </span>
               </div>
               <h2 className="mb-3 text-3xl font-bold text-[#1c2434]">

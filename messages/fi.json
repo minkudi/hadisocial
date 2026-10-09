@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Tilin avaaminen",
     "description": "Tyytyväisyytesi on meille tärkeintä.",
     "fullName": "Koko nimi",
@@ -21,7 +21,7 @@
     "successMessage": "Tili luotu. Tilinumero: {accountNumber}",
     "errorNetwork": "Verkkovirhe",
     "successTitle": "Tili luotu onnistuneesti",
-    "successWelcome": "Tervetuloa HADI SOCIALiin.",
+    "successWelcome": "Tervetuloa SCAP BENiin.",
     "successBody": "Onnittelut, tilisi on rekisteröity onnistuneesti järjestelmäämme.",
     "successRedirect": "Sinut ohjataan kirjautumissivulle",
     "successSecond": "sekunnin",
@@ -33,7 +33,7 @@
     "loginLink": "Kirjaudu sisään"
   },
   "login": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Kirjautuminen",
     "description": "Kirjaudu pankkitilillesi.",
     "email": "Sähköposti",

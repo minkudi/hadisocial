@@ -71,10 +71,10 @@ export default function DashboardLayout({ children, activeKey }) {
       <aside className="hidden lg:flex lg:flex-col w-64 bg-white border-r border-gray-200">
         <div className="h-16 px-6 flex items-center">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="HADI SOCIAL" className="h-9 w-9" />
+            <img src="/logo.svg" alt="SCAP BEN" className="h-9 w-9" />
             <div className="flex flex-col">
               <span className="text-sm font-semibold text-slate-900 tracking-tight">
-                HADI SOCIAL
+                SCAP BEN
               </span>
               <span className="text-[11px] text-slate-400 uppercase tracking-[0.16em]">
                 Menu
@@ -120,7 +120,7 @@ export default function DashboardLayout({ children, activeKey }) {
           <LanguageSwitcher currentLocale={locale} />
         </div>
         <div className="px-6 py-2 text-[11px] text-slate-400">
-          © 2026 HADI SOCIAL
+          © 2026 SCAP BEN
         </div>
       </aside>
 
@@ -141,7 +141,7 @@ export default function DashboardLayout({ children, activeKey }) {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-slate-900 tracking-tight">
-                    HADI SOCIAL
+                    SCAP BEN
                   </span>
                   <span className="text-[11px] text-slate-400 uppercase tracking-[0.16em]">
                     Menu

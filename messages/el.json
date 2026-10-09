@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Άνοιγμα λογαριασμού",
     "description": "Η ικανοποίησή σας είναι η προτεραιότητά μας.",
     "fullName": "Ονοματεπώνυμο",
@@ -21,7 +21,7 @@
     "successMessage": "Ο λογαριασμός δημιουργήθηκε. Αριθμός λογαριασμού: {accountNumber}",
     "errorNetwork": "Σφάλμα δικτύου",
     "successTitle": "Ο λογαριασμός δημιουργήθηκε με επιτυχία",
-    "successWelcome": "Καλώς ήρθατε στο HADI SOCIAL.",
+    "successWelcome": "Καλώς ήρθατε στο SCAP BEN.",
     "successBody": "Συγχαρητήρια, ο λογαριασμός σας καταχωρήθηκε με επιτυχία στο σύστημά μας.",
     "successRedirect": "Θα ανακατευθυνθείτε στη σελίδα σύνδεσης σε",
     "successSecond": "δευτερόλεπτο",
@@ -33,7 +33,7 @@
     "loginLink": "Σύνδεση"
   },
   "login": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Σύνδεση",
     "description": "Συνδεθείτε στον τραπεζικό σας λογαριασμό.",
     "email": "Email",

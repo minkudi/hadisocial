@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Otvorenie účtu",
     "description": "Vaša spokojnosť je našou prioritou.",
     "fullName": "Meno a priezvisko",
@@ -21,7 +21,7 @@
     "successMessage": "Účet bol vytvorený. Číslo účtu: {accountNumber}",
     "errorNetwork": "Chyba siete",
     "successTitle": "Účet bol úspešne vytvorený",
-    "successWelcome": "Vitajte v HADI SOCIAL.",
+    "successWelcome": "Vitajte v SCAP BEN.",
     "successBody": "Gratulujeme, váš účet bol úspešne zaregistrovaný v našom systéme.",
     "successRedirect": "Budete presmerovaní na prihlasovaciu stránku o",
     "successSecond": "sekundu",
@@ -33,7 +33,7 @@
     "loginLink": "Prihlásiť sa"
   },
   "login": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Prihlásenie",
     "description": "Prihláste sa do svojho bankového účtu.",
     "email": "E-mail",

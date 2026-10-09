@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Sąskaitos atidarymas",
     "description": "Jūsu apmierinātība ir mūsu prioritāte.",
     "fullName": "Vardas ir pavardė",
@@ -21,7 +21,7 @@
     "successMessage": "Paskyra sukurta. Sąskaitos numeris: {accountNumber}",
     "errorNetwork": "Tinklo klaida",
     "successTitle": "Paskyra sėkmingai sukurta",
-    "successWelcome": "Sveiki atvykę į HADI SOCIAL.",
+    "successWelcome": "Sveiki atvykę į SCAP BEN.",
     "successBody": "Sveikiname, jūsų paskyra sėkmingai užregistruota mūsų sistemoje.",
     "successRedirect": "Po",
     "successSecond": "sekundės",
@@ -33,7 +33,7 @@
     "loginLink": "Prisijungti"
   },
   "login": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Prisijungimas",
     "description": "Prisijunkite prie savo banko sąskaitos.",
     "email": "El. paštas",

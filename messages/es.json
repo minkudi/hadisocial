@@ -1,6 +1,6 @@
 {
   "register": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Apertura de cuenta",
     "description": "Su satisfacción es nuestra prioridad.",
     "fullName": "Nombre completo",
@@ -21,7 +21,7 @@
     "successMessage": "Cuenta creada. Número de cuenta: {accountNumber}",
     "errorNetwork": "Error de red",
     "successTitle": "Cuenta creada con éxito",
-    "successWelcome": "Bienvenido a HADI SOCIAL.",
+    "successWelcome": "Bienvenido a SCAP BEN.",
     "successBody": "Felicitaciones, su cuenta ha sido registrada con éxito en nuestro sistema.",
     "successRedirect": "Será redirigido a la página de inicio de sesión en",
     "successSecond": "segundo",
@@ -33,7 +33,7 @@
     "loginLink": "Iniciar sesión"
   },
   "login": {
-    "subtitle": "HADI SOCIAL",
+    "subtitle": "SCAP BEN",
     "title": "Inicio de sesión",
     "description": "Acceda a su cuenta bancaria.",
     "email": "Correo electrónico",
