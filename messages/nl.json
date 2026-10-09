@@ -106,6 +106,9 @@
       "clickToFlip": "Klik om om te draaien",
       "sendingSms": "SMS wordt verzonden…",
       "invalidNumber": "Ongeldig kaartnummer"
+    },
+    "transactions": {
+      "empty": "Nog geen transacties."
     }
   },
   "transactions": {

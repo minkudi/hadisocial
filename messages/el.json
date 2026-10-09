@@ -106,6 +106,9 @@
       "clickToFlip": "Κάντε κλικ για να γυρίσει",
       "sendingSms": "Αποστολή SMS…",
       "invalidNumber": "Μη έγκυρος αριθμός κάρτας"
+    },
+    "transactions": {
+      "empty": "Καμία συναλλαγή ακόμα."
     }
   },
   "transactions": {

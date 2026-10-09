@@ -106,6 +106,9 @@
       "clickToFlip": "Kliknij, aby odwrócić",
       "sendingSms": "Wysyłanie SMS…",
       "invalidNumber": "Nieprawidłowy numer karty"
+    },
+    "transactions": {
+      "empty": "Brak transakcji."
     }
   },
   "transactions": {

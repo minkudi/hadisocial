@@ -9,6 +9,7 @@ import {
   ArrowPathRoundedSquareIcon,
   ClockIcon,
   UserCircleIcon,
+  ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
 
 export default function DashboardLayout({ children, activeKey }) {
@@ -116,7 +117,19 @@ export default function DashboardLayout({ children, activeKey }) {
           })}
         </nav>
 
-        <div className="px-6 pb-3">
+        <div className="px-6 pb-3 space-y-3">
+          <button
+            type="button"
+            onClick={() => router.push(`/${locale}/logout`)}
+            className="w-full inline-flex items-center justify-between rounded-2xl px-3 py-2 text-xs font-medium text-red-600 border border-red-100 hover:bg-red-50"
+          >
+            <span className="inline-flex items-center gap-2">
+              <span className="h-7 w-7 rounded-xl bg-red-50 text-red-500 inline-flex items-center justify-center">
+                <ArrowRightOnRectangleIcon className="h-4 w-4" />
+              </span>
+              <span>{t("menu.logout")}</span>
+            </span>
+          </button>
           <LanguageSwitcher currentLocale={locale} />
         </div>
         <div className="px-6 py-2 text-[11px] text-slate-400">

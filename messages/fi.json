@@ -106,6 +106,9 @@
       "clickToFlip": "Käännä kortti napsauttamalla",
       "sendingSms": "Lähetetään tekstiviestiä…",
       "invalidNumber": "Virheellinen kortin numero"
+    },
+    "transactions": {
+      "empty": "Ei vielä tapahtumia."
     }
   },
   "transactions": {

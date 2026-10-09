@@ -106,6 +106,9 @@
       "clickToFlip": "Kliknite, da obrnete",
       "sendingSms": "Pošiljanje SMS…",
       "invalidNumber": "Neveljavna številka kartice"
+    },
+    "transactions": {
+      "empty": "Ni še transakcij."
     }
   },
   "transactions": {

@@ -107,6 +107,9 @@
       "sendingSms": "Envoi du SMS…",
       "invalidNumber": "Numéro de carte invalide.",
       "invalidExpiry": "Date d'expiration invalide."
+    },
+    "transactions": {
+      "empty": "Aucune transaction pour le moment."
     }
   },
   "transactions": {

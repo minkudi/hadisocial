@@ -7,17 +7,20 @@ async function assertAdmin() {
   const cookieStore = await cookies();
   const userId = cookieStore.get("user_id")?.value;
   const isAdmin = cookieStore.get("is_admin")?.value;
-  if (!userId || isAdmin !== "1") return false;
-  return true;
+  const isSuperAdmin = cookieStore.get("is_super_admin")?.value;
+  if (!userId || isAdmin !== "1") return { ok: false };
+  return { ok: true, isSuperAdmin: isSuperAdmin === "1", userId: Number(userId) };
 }
 
 export async function GET() {
-  const ok = await assertAdmin();
+  const { ok, isSuperAdmin } = await assertAdmin();
   if (!ok) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
   const db = await getDb();
+
+  const where = isSuperAdmin ? "" : "WHERE u.is_admin = 0";
 
   const [rows] = await db.execute(
     `SELECT 
@@ -32,6 +35,7 @@ export async function GET() {
        u.created_at
      FROM users u
      LEFT JOIN accounts a ON a.user_id = u.id
+     ${where}
      ORDER BY u.created_at DESC`
   );
 

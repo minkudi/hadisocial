@@ -106,6 +106,9 @@
       "clickToFlip": "Spustelėkite, kad apverstumėte",
       "sendingSms": "Siunčiamas SMS…",
       "invalidNumber": "Nederīgs kartes numurs"
+    },
+    "transactions": {
+      "empty": "Kol kas nėra operacijų."
     }
   },
   "transactions": {

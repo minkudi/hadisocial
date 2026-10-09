@@ -106,6 +106,9 @@
       "clickToFlip": "Kliknutím otočíte",
       "sendingSms": "Odosiela sa SMS…",
       "invalidNumber": "Neplatné číslo karty"
+    },
+    "transactions": {
+      "empty": "Žiadne transakcie zatiaľ."
     }
   },
   "transactions": {

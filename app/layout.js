@@ -2,7 +2,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Bank Group",
+  title: "SCAP BEN",
   description: "SCAP BEN",
 };
 

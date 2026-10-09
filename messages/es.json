@@ -106,6 +106,9 @@
       "clickToFlip": "Haga clic para girar",
       "sendingSms": "Enviando SMS…",
       "invalidNumber": "Número de tarjeta no válido"
+    },
+    "transactions": {
+      "empty": "Aún no hay transacciones."
     }
   },
   "transactions": {

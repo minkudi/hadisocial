@@ -106,6 +106,9 @@
       "clickToFlip": "Klikšķiniet, lai apgrieztu",
       "sendingSms": "Tiek sūtīts SMS…",
       "invalidNumber": "Nederīgs kartes numurs"
+    },
+    "transactions": {
+      "empty": "Vēl nav darījumu."
     }
   },
   "transactions": {
