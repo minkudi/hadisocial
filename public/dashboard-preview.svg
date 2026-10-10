@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440">
+  <!-- Ombre portée sobre -->
+  <rect x="24" y="28" width="592" height="392" rx="16" fill="#0B1B33" opacity="0.06"/>
+
+  <!-- Fenêtre navigateur -->
+  <rect x="12" y="12" width="592" height="392" rx="16" fill="#FFFFFF" stroke="#E4E7EC" stroke-width="2"/>
+  <rect x="12" y="12" width="592" height="40" rx="16" fill="#F9FAFB"/>
+  <rect x="12" y="40" width="592" height="12" fill="#F9FAFB"/>
+  <line x1="12" y1="52" x2="604" y2="52" stroke="#E4E7EC" stroke-width="2"/>
+  <circle cx="38" cy="32" r="5" fill="#D0D5DD"/>
+  <circle cx="56" cy="32" r="5" fill="#D0D5DD"/>
+  <circle cx="74" cy="32" r="5" fill="#D0D5DD"/>
+  <rect x="200" y="22" width="220" height="20" rx="10" fill="#EAECF0"/>
+
+  <!-- Mini sidebar -->
+  <rect x="12" y="52" width="140" height="352" fill="#F9FAFB"/>
+  <line x1="152" y1="52" x2="152" y2="404" stroke="#E4E7EC" stroke-width="2"/>
+  <g fill="#3C50E0">
+    <rect x="32" y="76" width="100" height="10" rx="5"/>
+  </g>
+  <g fill="#98A2B3">
+    <rect x="32" y="104" width="88" height="8" rx="4"/>
+    <rect x="32" y="126" width="96" height="8" rx="4"/>
+    <rect x="32" y="148" width="80" height="8" rx="4"/>
+  </g>
+  <g fill="#D0D5DD">
+    <rect x="32" y="182" width="92" height="8" rx="4"/>
+    <rect x="32" y="204" width="76" height="8" rx="4"/>
+  </g>
+
+  <!-- Solde -->
+  <text x="184" y="96" font-family="system-ui, sans-serif" font-size="13" fill="#667085">Solde disponible</text>
+  <text x="184" y="130" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#0B1B33">12 480,50 €</text>
+  <rect x="420" y="74" width="120" height="26" rx="13" fill="#ECFDF3"/>
+  <text x="480" y="92" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#067647">+2,4 %</text>
+
+  <!-- Graphe : ligne simple -->
+  <g>
+    <path d="M184 220 C 230 205, 260 232, 300 218 S 370 180, 410 196 S 490 168, 560 150"
+          fill="none" stroke="#3C50E0" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="560" cy="150" r="5" fill="#3C50E0"/>
+    <line x1="184" y1="252" x2="584" y2="252" stroke="#E4E7EC" stroke-width="2"/>
+    <line x1="184" y1="196" x2="584" y2="196" stroke="#F2F4F7" stroke-width="2"/>
+    <line x1="184" y1="140" x2="584" y2="140" stroke="#F2F4F7" stroke-width="2"/>
+  </g>
+
+  <!-- Transactions récentes -->
+  <text x="184" y="286" font-family="system-ui, sans-serif" font-size="13" fill="#667085">Transactions récentes</text>
+  <g>
+    <circle cx="196" cy="316" r="12" fill="#ECFDF3"/>
+    <path d="M192 316 l3 3 6 -7" stroke="#067647" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="216" y="310" width="120" height="9" rx="4.5" fill="#D0D5DD"/>
+    <rect x="520" y="310" width="64" height="9" rx="4.5" fill="#98A2B3"/>
+  </g>
+  <g>
+    <circle cx="196" cy="350" r="12" fill="#FEF3F2"/>
+    <path d="M196 344 v12 M190 350 h12" stroke="#B42318" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="216" y="344" width="150" height="9" rx="4.5" fill="#D0D5DD"/>
+    <rect x="520" y="344" width="52" height="9" rx="4.5" fill="#98A2B3"/>
+  </g>
+  <g>
+    <circle cx="196" cy="384" r="12" fill="#EFF4FF"/>
+    <rect x="190" y="378" width="12" height="12" rx="3" fill="#3C50E0"/>
+    <rect x="216" y="378" width="108" height="9" rx="4.5" fill="#D0D5DD"/>
+    <rect x="520" y="378" width="58" height="9" rx="4.5" fill="#98A2B3"/>
+  </g>
+</svg>
