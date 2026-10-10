@@ -110,6 +110,10 @@ export async function POST(req, ctx) {
           label,
           transactionId,
           createdAt: displayDate,
+          senderName: user.fullName,
+          senderAccount: account.accountNumber,
+          beneficiaryName: "SCAP BEN",
+          beneficiaryAccount: "-",
         });
 
         await sendTransactionalEmail({

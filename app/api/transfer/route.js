@@ -151,6 +151,7 @@ export async function POST(req) {
           reference,
           date: undefined,
           newBalance,
+          accountNumber: String(account.account_number),
         },
       });
 
