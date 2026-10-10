@@ -4,7 +4,6 @@ import LanguageSwitcher from "../components/LanguageSwitcher";
 import Reveal from "../components/Reveal";
 import ServicesCarousel from "../components/ServicesCarousel";
 import { getHomeContent } from "../../lib/homeContent";
-import { ALL_LOCALES, flagUrl } from "../../lib/availableLocales";
 import {
   EyeIcon,
   CursorArrowRaysIcon,
@@ -24,8 +23,8 @@ const SECURITY_ICONS = [
   BuildingLibraryIcon,
 ];
 
-export default function HomePage({ params }) {
-  const { locale = "fr" } = params;
+export default async function HomePage({ params }) {
+  const { locale = "fr" } = await params;
   const c = getHomeContent(locale);
   const lang = (path) => `/${locale}${path}`;
 
@@ -115,26 +114,6 @@ export default function HomePage({ params }) {
               alt={c.hero.photoAlt}
               className="relative rounded-2xl w-full h-[380px] object-cover hover:scale-[1.01] transition-transform duration-500"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* ===== LANGUES (bandeau défilant) ===== */}
-      <section className="border-b border-gray-100 bg-gray-50/60 overflow-hidden marquee-hover">
-        <div className="mx-auto max-w-6xl px-6 pt-8 pb-2">
-          <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-            <div className="animate-marquee flex w-max gap-2">
-              {[...ALL_LOCALES, ...ALL_LOCALES].map((l, i) => (
-                <a
-                  key={`${l.code}-${i}`}
-                  href={`/${l.code}`}
-                  className="flex shrink-0 items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-600 hover:border-[#3C50E0]/40 hover:text-[#3C50E0] transition"
-                >
-                  <img src={flagUrl(l.flagCode)} alt="" width="16" height="12" className="rounded-[2px] object-cover" />
-                  {l.label}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </section>
