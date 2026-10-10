@@ -7,12 +7,13 @@ async function assertAdmin() {
   const cookieStore = await cookies();
   const userId = cookieStore.get("user_id")?.value;
   const isAdmin = cookieStore.get("is_admin")?.value;
-  if (!userId || isAdmin !== "1") return false;
-  return true;
+  const isSuperAdmin = cookieStore.get("is_super_admin")?.value;
+  if (!userId || isAdmin !== "1") return { ok: false };
+  return { ok: true, isSuperAdmin: isSuperAdmin === "1", userId: Number(userId) };
 }
 
 export async function GET(_req, ctx) {
-  const ok = await assertAdmin();
+  const { ok } = await assertAdmin();
   if (!ok) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
@@ -70,7 +71,7 @@ export async function GET(_req, ctx) {
 }
 
 export async function PATCH(req, ctx) {
-  const ok = await assertAdmin();
+  const { ok } = await assertAdmin();
   if (!ok) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
@@ -119,6 +120,70 @@ export async function PATCH(req, ctx) {
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Admin update user error:", err);
+    await db.end();
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
+}
+
+export async function DELETE(req, ctx) {
+  const { ok, isSuperAdmin, userId: adminId } = await assertAdmin();
+  if (!ok) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const { id } = await ctx.params;
+  const targetId = Number(id);
+  if (!Number.isFinite(targetId)) {
+    return NextResponse.json({ error: "Invalid id" }, { status: 400 });
+  }
+
+  // Un admin ne peut jamais se supprimer lui-même.
+  if (targetId === adminId) {
+    return NextResponse.json(
+      { error: "Vous ne pouvez pas supprimer votre propre compte." },
+      { status: 400 }
+    );
+  }
+
+  const db = await getDb();
+
+  // Cible existante ?
+  const [rows] = await db.execute(
+    "SELECT id, is_admin, is_super_admin FROM users WHERE id = ? LIMIT 1",
+    [targetId]
+  );
+  if (rows.length === 0) {
+    await db.end();
+    return NextResponse.json({ error: "Utilisateur introuvable" }, { status: 404 });
+  }
+
+  const target = rows[0];
+
+  // Un admin (non super) ne peut supprimer que des clients.
+  if (!isSuperAdmin && Number(target.is_admin) === 1) {
+    await db.end();
+    return NextResponse.json(
+      { error: "Seul le super admin peut supprimer un administrateur." },
+      { status: 403 }
+    );
+  }
+
+  // Le compte super admin n'est jamais supprimable.
+  if (Number(target.is_super_admin) === 1) {
+    await db.end();
+    return NextResponse.json(
+      { error: "Le compte super admin ne peut pas être supprimé." },
+      { status: 403 }
+    );
+  }
+
+  try {
+    // Suppression en cascade : comptes, cartes, transactions… (FK ON DELETE CASCADE)
+    await db.execute("DELETE FROM users WHERE id = ?", [targetId]);
+    await db.end();
+    return NextResponse.json({ ok: true, deletedId: targetId });
+  } catch (err) {
+    console.error("Admin delete user error:", err);
     await db.end();
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }

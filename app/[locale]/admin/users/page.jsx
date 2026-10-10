@@ -16,6 +16,9 @@ export default function AdminUsersPage() {
   const [filtered, setFiltered] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
+  const [deleteTarget, setDeleteTarget] = useState(null);
+  const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState("");
 
   useEffect(() => {
     async function load() {
@@ -56,6 +59,29 @@ export default function AdminUsersPage() {
 
   function openUser(id) {
     router.push(`/${locale}/admin/users/${id}`);
+  }
+
+  async function confirmDelete() {
+    if (!deleteTarget || deleting) return;
+    setDeleting(true);
+    setDeleteError("");
+    try {
+      const res = await fetch(`/api/admin/users/${deleteTarget.id}`, {
+        method: "DELETE",
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setDeleteError(json.error || "Erreur lors de la suppression.");
+        return;
+      }
+      setUsers((prev) => prev.filter((u) => u.id !== deleteTarget.id));
+      setDeleteTarget(null);
+    } catch (e) {
+      console.error(e);
+      setDeleteError("Erreur réseau lors de la suppression.");
+    } finally {
+      setDeleting(false);
+    }
   }
 
   return (
@@ -193,6 +219,17 @@ export default function AdminUsersPage() {
     >
       Créditer
     </button>
+    <button
+      type="button"
+      onClick={(e) => {
+        e.stopPropagation();
+        setDeleteError("");
+        setDeleteTarget(u);
+      }}
+      className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-3 py-1.5 text-[11px] font-medium text-rose-600 hover:bg-rose-100 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:ring-offset-1"
+    >
+      Supp
+    </button>
   </div>
 </td>
 
@@ -204,6 +241,60 @@ export default function AdminUsersPage() {
           )}
         </div>
       </div>
+
+      {/* Modal de confirmation de suppression */}
+      {deleteTarget && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4 animate-fade-in"
+          onClick={() => !deleting && setDeleteTarget(null)}
+        >
+          <div
+            className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl animate-slide-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-base font-semibold text-slate-900 mb-2">
+              Supprimer cet utilisateur ?
+            </h2>
+            <p className="text-sm text-slate-500 mb-1">
+              Vous êtes sur le point de supprimer définitivement le compte de{" "}
+              <span className="font-medium text-slate-700">
+                {deleteTarget.fullName || deleteTarget.email}
+              </span>{" "}
+              (ID #{deleteTarget.id}
+              {deleteTarget.accountNumber ? `, compte ${deleteTarget.accountNumber}` : ""}).
+            </p>
+            <p className="text-xs text-rose-500 mb-4">
+              Cette action est irréversible : le solde, les cartes et l&apos;historique
+              des transactions seront supprimés.
+            </p>
+
+            {deleteError && (
+              <p className="mb-4 rounded-lg bg-rose-50 border border-rose-100 px-3 py-2 text-xs text-rose-600">
+                {deleteError}
+              </p>
+            )}
+
+            <div className="flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setDeleteTarget(null)}
+                disabled={deleting}
+                className="rounded-lg border border-slate-200 px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 disabled:opacity-50 cursor-pointer"
+              >
+                Annuler
+              </button>
+              <button
+                type="button"
+                onClick={confirmDelete}
+                disabled={deleting}
+                className="rounded-lg bg-rose-600 px-4 py-2 text-xs font-medium text-white hover:bg-rose-700 disabled:opacity-60 cursor-pointer"
+              >
+                {deleting ? "Suppression…" : "Supprimer définitivement"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
