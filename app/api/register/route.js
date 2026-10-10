@@ -568,7 +568,7 @@ async function sendWelcomeEmail(to, fullName, accountNumber, locale = "fr") {
 
     await db.end();
 
-    const createdAt = new Date().toLocaleString("fr-FR");
+    const createdAt = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Berlin" });
 
     // Email bienvenue client
     try {

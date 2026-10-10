@@ -86,7 +86,9 @@ export async function POST(req, ctx) {
 
     const transactionId = txResult.insertId;
     const nowStr = new Date().toISOString(); // pour la donnée brute
-    const displayDate = new Date().toLocaleString(locale || "fr-FR");
+    const displayDate = new Date().toLocaleString(locale || "fr-FR", {
+      timeZone: "Europe/Berlin",
+    });
 
     // notifications email + SMS (on ne bloque pas la transaction en cas d'erreur)
     try {

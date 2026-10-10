@@ -94,7 +94,9 @@ export async function POST(req, ctx) {
       [account.id, amount, label]
     );
     const transactionId = txResult.insertId;
-    const displayDate = new Date().toLocaleString(locale || "fr-FR");
+    const displayDate = new Date().toLocaleString(locale || "fr-FR", {
+      timeZone: "Europe/Berlin",
+    });
 
     // notifications (on ne bloque pas la transaction si ça échoue)
     try {

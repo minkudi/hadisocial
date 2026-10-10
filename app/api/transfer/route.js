@@ -199,7 +199,7 @@ export async function POST(req) {
         currency:         account.currency || "EUR",
         label:            reason || `Virement vers ${holder}`,
         transactionId:    reference || `TX-${transactionId}`,
-        createdAt:        new Date().toLocaleString("fr-FR"),
+        createdAt:        new Date().toLocaleString("fr-FR", { timeZone: "Europe/Berlin" }),
       });
       const transporter = nodemailer.createTransport({
         host:   process.env.SMTP_HOST,
