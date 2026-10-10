@@ -21,9 +21,9 @@ export default function LoginPage() {
   const [error, setError] = useState('');
   const [minLoading, setMinLoading] = useState(true);
 
-  // Le skeleton reste affiché au minimum 1,5 s
+  // Le skeleton reste affiché au minimum 5 s
   useEffect(() => {
-    const timer = setTimeout(() => setMinLoading(false), 1500);
+    const timer = setTimeout(() => setMinLoading(false), 5000);
     return () => clearTimeout(timer);
   }, []);
 

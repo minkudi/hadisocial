@@ -1,6 +1,6 @@
 // Skeletons animés des pages d'authentification.
 // Utilisés par loading.jsx (chargement serveur) et par les pages elles-mêmes
-// (durée d'affichage minimum de 1,5 s).
+// (durée d'affichage minimum de 5 s).
 
 export function LoginSkeleton() {
   return (
