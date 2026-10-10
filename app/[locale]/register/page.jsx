@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { PhoneInput } from 'react-international-phone';
 import { COUNTRIES } from '../../countries';
+import { RegisterSkeleton } from '../../components/AuthSkeletons';
 import { useParams, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -43,6 +44,13 @@ export default function RegisterPage() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
+  const [minLoading, setMinLoading] = useState(true);
+
+  // Le skeleton reste affiché au minimum 1,5 s
+  useEffect(() => {
+    const timer = setTimeout(() => setMinLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Modal succès + redirection
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -120,6 +128,8 @@ export default function RegisterPage() {
       setLoading(false);
     }
   }
+
+  if (minLoading) return <RegisterSkeleton />;
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#f1f5f9] py-8">

@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 import InputGroup from "../../components/FormElements/InputGroup";
+import { LoginSkeleton } from "../../components/AuthSkeletons";
 import { Checkbox } from "../../components/FormElements/checkbox";
 import { EmailIcon, PasswordIcon, LockIcon } from "../../components/icons";
 
@@ -18,6 +19,13 @@ export default function LoginPage() {
   const [data, setData] = useState({ email: '', password: '', remember: false });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [minLoading, setMinLoading] = useState(true);
+
+  // Le skeleton reste affiché au minimum 1,5 s
+  useEffect(() => {
+    const timer = setTimeout(() => setMinLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -48,6 +56,8 @@ export default function LoginPage() {
       setLoading(false);
     }
   }
+
+  if (minLoading) return <LoginSkeleton />;
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#f1f5f9] py-8">
