@@ -121,7 +121,7 @@ export default function AdminShell({ children, isSuperAdmin, locale }) {
             </span>
           </button>
 
-          <LanguageSwitcher currentLocale={locale} />
+          <LanguageSwitcher currentLocale={locale} direction="up" />
         </div>
         <div className="px-6 py-2 text-[11px] text-slate-400">
           © 2026 SCAP BEN Admin
@@ -216,7 +216,7 @@ export default function AdminShell({ children, isSuperAdmin, locale }) {
               </button>
             </nav>
             <div className="px-4 pb-4">
-              <LanguageSwitcher currentLocale={locale} />
+              <LanguageSwitcher currentLocale={locale} direction="up" />
             </div>
           </aside>
         </div>

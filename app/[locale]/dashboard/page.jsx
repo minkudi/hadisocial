@@ -105,7 +105,7 @@ export default function DashboardPage() {
           })}
         </nav>
         <div className="px-6 pb-3">
-          <LanguageSwitcher currentLocale={locale} />
+          <LanguageSwitcher currentLocale={locale} direction="up" />
         </div>
         <div className="px-6 py-2 text-[11px] text-slate-400">
           © 2026 SCAP BEN
@@ -178,7 +178,7 @@ export default function DashboardPage() {
               })}
             </nav>
             <div className="px-4 pb-4">
-              <LanguageSwitcher />
+              <LanguageSwitcher currentLocale={locale} direction="up" />
             </div>
           </aside>
         </div>

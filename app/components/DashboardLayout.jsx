@@ -130,7 +130,7 @@ export default function DashboardLayout({ children, activeKey }) {
               <span>{t("menu.logout")}</span>
             </span>
           </button>
-          <LanguageSwitcher currentLocale={locale} />
+          <LanguageSwitcher currentLocale={locale} direction="up" />
         </div>
         <div className="px-6 py-2 text-[11px] text-slate-400">
           © 2026 SCAP BEN
@@ -202,7 +202,7 @@ export default function DashboardLayout({ children, activeKey }) {
               })}
             </nav>
             <div className="px-4 pb-4">
-              <LanguageSwitcher currentLocale={locale} />
+              <LanguageSwitcher currentLocale={locale} direction="up" />
             </div>
           </aside>
         </div>

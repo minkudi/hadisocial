@@ -1,14 +1,11 @@
 // Page d'accueil publique : One Page institutionnelle SCAP BEN
 import Link from "next/link";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import Reveal from "../components/Reveal";
+import ServicesCarousel from "../components/ServicesCarousel";
 import { getHomeContent } from "../../lib/homeContent";
+import { ALL_LOCALES, flagUrl } from "../../lib/availableLocales";
 import {
-  BanknotesIcon,
-  CreditCardIcon,
-  ArrowsRightLeftIcon,
-  HandRaisedIcon,
-  DocumentChartBarIcon,
-  ChatBubbleLeftRightIcon,
   EyeIcon,
   CursorArrowRaysIcon,
   ArrowDownTrayIcon,
@@ -17,15 +14,6 @@ import {
   ShieldCheckIcon,
   BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
-
-const SERVICE_ICONS = [
-  BanknotesIcon,
-  CreditCardIcon,
-  ArrowsRightLeftIcon,
-  HandRaisedIcon,
-  DocumentChartBarIcon,
-  ChatBubbleLeftRightIcon,
-];
 
 const PRODUCT_ICONS = [EyeIcon, CursorArrowRaysIcon, ArrowDownTrayIcon];
 
@@ -81,19 +69,19 @@ export default function HomePage({ params }) {
       <section className="border-b border-gray-100">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="inline-block rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-gray-500 mb-6">
+            <p className="animate-rise inline-block rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-gray-500 mb-6" style={{ animationDelay: "0ms" }}>
               {c.hero.badge}
             </p>
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-5">
+            <h1 className="animate-rise text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-5" style={{ animationDelay: "100ms" }}>
               {c.hero.title}
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
+            <p className="animate-rise text-lg text-gray-600 leading-relaxed mb-8 max-w-lg" style={{ animationDelay: "200ms" }}>
               {c.hero.subtitle}
             </p>
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="animate-rise flex flex-wrap gap-3 mb-10" style={{ animationDelay: "300ms" }}>
               <Link
                 href={lang("/register")}
-                className="rounded-lg bg-[#3C50E0] px-6 py-3 text-sm font-semibold text-white hover:bg-[#2f42c9] transition"
+                className="rounded-lg bg-[#3C50E0] px-6 py-3 text-sm font-semibold text-white hover:bg-[#2f42c9] hover:-translate-y-0.5 transition"
               >
                 {c.hero.ctaPrimary}
               </Link>
@@ -104,7 +92,7 @@ export default function HomePage({ params }) {
                 {c.hero.ctaSecondary}
               </Link>
             </div>
-            <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+            <ul className="animate-rise flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500" style={{ animationDelay: "400ms" }}>
               {[
                 [c.hero.trust1, "M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"],
                 [c.hero.trust2, "M3 10h18M3 14h18M7 6h10a4 4 0 010 12H7A4 4 0 017 6z"],
@@ -120,13 +108,33 @@ export default function HomePage({ params }) {
             </ul>
           </div>
 
-          <div className="relative">
+          <div className="relative animate-rise" style={{ animationDelay: "250ms" }}>
             <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl border border-gray-200" aria-hidden="true" />
             <img
               src="/home-hero.jpg"
               alt={c.hero.photoAlt}
-              className="relative rounded-2xl w-full h-[380px] object-cover"
+              className="relative rounded-2xl w-full h-[380px] object-cover hover:scale-[1.01] transition-transform duration-500"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== LANGUES (bandeau défilant) ===== */}
+      <section className="border-b border-gray-100 bg-gray-50/60 overflow-hidden marquee-hover">
+        <div className="mx-auto max-w-6xl px-6 pt-8 pb-2">
+          <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+            <div className="animate-marquee flex w-max gap-2">
+              {[...ALL_LOCALES, ...ALL_LOCALES].map((l, i) => (
+                <a
+                  key={`${l.code}-${i}`}
+                  href={`/${l.code}`}
+                  className="flex shrink-0 items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-600 hover:border-[#3C50E0]/40 hover:text-[#3C50E0] transition"
+                >
+                  <img src={flagUrl(l.flagCode)} alt="" width="16" height="12" className="rounded-[2px] object-cover" />
+                  {l.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -150,26 +158,15 @@ export default function HomePage({ params }) {
             <h2 className="text-3xl font-bold tracking-tight mb-3">{c.services.title}</h2>
             <p className="text-gray-600">{c.services.subtitle}</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {c.services.cards.map((card, i) => {
-              const Icon = SERVICE_ICONS[i % SERVICE_ICONS.length];
-              return (
-                <div key={i} className="rounded-xl border border-gray-200 p-6 hover:border-[#3C50E0]/40 transition">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#3C50E0]/10 text-[#3C50E0] mb-4">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="font-semibold mb-2">{card.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{card.desc}</p>
-                </div>
-              );
-            })}
-          </div>
+          <Reveal>
+            <ServicesCarousel cards={c.services.cards} />
+          </Reveal>
         </div>
       </section>
 
       {/* ===== PRODUIT ===== */}
       <section className="border-b border-gray-100 bg-gray-50/60">
-        <div className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
+        <Reveal className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
           <div className="order-2 lg:order-1">
             <img
               src="/dashboard-preview.svg"
@@ -197,12 +194,12 @@ export default function HomePage({ params }) {
               })}
             </ul>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ===== CARTE (section sombre) ===== */}
       <section className="bg-[#0B1B33] text-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
+        <Reveal className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight mb-3">{c.cardSection.title}</h2>
             <p className="text-gray-300 mb-8">{c.cardSection.subtitle}</p>
@@ -221,15 +218,15 @@ export default function HomePage({ params }) {
             <img
               src="/bank-card.svg"
               alt={c.cardSection.title}
-              className="w-full max-w-md rounded-2xl shadow-2xl shadow-black/40"
+              className="animate-float w-full max-w-md rounded-2xl shadow-2xl shadow-black/40"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ===== ACCOMPAGNEMENT ===== */}
       <section className="border-b border-gray-100">
-        <div className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
+        <Reveal className="mx-auto max-w-6xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight mb-4">{c.advisor.title}</h2>
             <p className="text-gray-600 leading-relaxed max-w-lg">{c.advisor.text}</p>
@@ -237,14 +234,14 @@ export default function HomePage({ params }) {
           <img
             src="/home-advisor.jpg"
             alt={c.advisor.title}
-            className="rounded-2xl w-full h-[320px] object-cover"
+            className="rounded-2xl w-full h-[320px] object-cover hover:scale-[1.01] transition-transform duration-500"
           />
-        </div>
+        </Reveal>
       </section>
 
       {/* ===== SECURITE ===== */}
       <section id="security" className="border-b border-gray-100 bg-gray-50/60">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+        <Reveal className="mx-auto max-w-6xl px-6 py-20">
           <div className="max-w-2xl mb-12">
             <h2 className="text-3xl font-bold tracking-tight mb-3">{c.security.title}</h2>
             <p className="text-gray-600">{c.security.subtitle}</p>
@@ -253,7 +250,7 @@ export default function HomePage({ params }) {
             {c.security.items.map((item, i) => {
               const Icon = SECURITY_ICONS[i % SECURITY_ICONS.length];
               return (
-                <div key={i} className="rounded-xl border border-gray-200 bg-white p-6">
+                <div key={i} className="rounded-xl border border-gray-200 bg-white p-6 hover:-translate-y-1 hover:shadow-md transition">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#0B1B33] text-white mb-4">
                     <Icon className="h-5 w-5" />
                   </span>
@@ -263,12 +260,12 @@ export default function HomePage({ params }) {
               );
             })}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ===== FAQ ===== */}
       <section id="faq" className="border-b border-gray-100">
-        <div className="mx-auto max-w-3xl px-6 py-20">
+        <Reveal className="mx-auto max-w-3xl px-6 py-20">
           <h2 className="text-3xl font-bold tracking-tight mb-10 text-center">{c.faq.title}</h2>
           <div className="divide-y divide-gray-200 rounded-xl border border-gray-200">
             {c.faq.items.map((item, i) => (
@@ -287,21 +284,21 @@ export default function HomePage({ params }) {
               </details>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ===== CTA FINAL ===== */}
       <section className="bg-[#3C50E0]">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <Reveal className="mx-auto max-w-6xl px-6 py-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white mb-3">{c.cta.title}</h2>
           <p className="text-indigo-100 mb-8">{c.cta.subtitle}</p>
           <Link
             href={lang("/register")}
-            className="inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-[#3C50E0] hover:bg-indigo-50 transition"
+            className="inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-[#3C50E0] hover:bg-indigo-50 hover:-translate-y-0.5 transition"
           >
             {c.cta.button}
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       {/* ===== FOOTER ===== */}
@@ -323,7 +320,7 @@ export default function HomePage({ params }) {
                 <a href="#" className="hover:text-white">{c.footer.terms}</a>
               </nav>
               <div>
-                <LanguageSwitcher currentLocale={locale} />
+                <LanguageSwitcher currentLocale={locale} direction="up" />
               </div>
             </div>
           </div>
