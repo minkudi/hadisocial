@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { getDb } from "../../../../lib/db";
+import { sendPasswordChangedEmail } from "../../../../lib/mail";
 
 export async function PUT(req) {
   const db = await getDb();
@@ -35,7 +36,7 @@ export async function PUT(req) {
 
     // Récupérer l'utilisateur
     const [users] = await db.execute(
-      "SELECT id, password FROM users WHERE id = ? LIMIT 1",
+      "SELECT id, password, email, full_name AS fullName, locale FROM users WHERE id = ? LIMIT 1",
       [userId]
     );
 
@@ -65,6 +66,20 @@ export async function PUT(req) {
     ]);
 
     await db.end();
+
+    // Alerte e-mail : ne doit jamais faire échouer le changement de mot de passe.
+    try {
+      await sendPasswordChangedEmail({
+        to: user.email,
+        fullName: user.fullName,
+        locale: user.locale,
+        changedAt: new Date().toLocaleString("fr-FR", {
+          timeZone: "Europe/Berlin",
+        }),
+      });
+    } catch (mailErr) {
+      console.error("[PASSWORD] Erreur alerte e-mail:", mailErr.message);
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {

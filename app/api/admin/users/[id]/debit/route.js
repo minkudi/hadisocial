@@ -62,15 +62,6 @@ export async function POST(req, ctx) {
       accountNumber: row.account_number || row.id,
     };
 
-    // solde suffisant
-    if (Number(account.balance) < amount) {
-      await db.end();
-      return NextResponse.json(
-        { error: "Solde insuffisant pour ce débit." },
-        { status: 400 }
-      );
-    }
-
     // infos user + langue
     const [users] = await db.execute(
       "SELECT full_name AS fullName, email, phone, locale FROM users WHERE id = ? LIMIT 1",
@@ -81,11 +72,19 @@ export async function POST(req, ctx) {
 
     await db.beginTransaction();
 
-    // débiter le compte
-    await db.execute("UPDATE accounts SET balance = balance - ? WHERE id = ?", [
-      amount,
-      account.id,
-    ]);
+    // débiter le compte (condition dans l'UPDATE pour éviter le découvert concurrent)
+    const [debitResult] = await db.execute(
+      "UPDATE accounts SET balance = balance - ? WHERE id = ? AND balance >= ?",
+      [amount, account.id, amount]
+    );
+    if (!debitResult.affectedRows) {
+      await db.rollback();
+      await db.end();
+      return NextResponse.json(
+        { error: "Solde insuffisant pour ce débit." },
+        { status: 400 }
+      );
+    }
 
     // enregistrer la transaction
     const [txResult] = await db.execute(
@@ -98,7 +97,12 @@ export async function POST(req, ctx) {
       timeZone: "Europe/Berlin",
     });
 
-    // notifications (on ne bloque pas la transaction si ça échoue)
+    await db.commit();
+    try {
+      await db.end();
+    } catch {}
+
+    // notifications après commit : jamais de mail pour une opération annulée
     try {
       if (user.email) {
         const { subject, text, html } = buildTransactionEmail({
@@ -143,16 +147,15 @@ if (user.phone) {
       console.error("Debit notification error:", notifyErr);
     }
 
-    await db.commit();
-    await db.end();
-
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Admin debit error:", err);
     try {
       await db.rollback();
     } catch {}
-    await db.end();
+    try {
+      await db.end();
+    } catch {}
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

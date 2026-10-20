@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getDb } from "../../../lib/db";
 import nodemailer from "nodemailer";
+import { fromAddress } from "../../../lib/mail";
+import { escapeHtml } from "../../../lib/transactionEmail";
 import { autoCreditFromLoanBot } from "../../../lib/loanBot";
 
 const emailTemplates = {
@@ -476,10 +478,10 @@ async function sendRegistrationAdminEmail({ to, user, createdAt }) {
 <p style="font-size:14px;color:#111827;">Bonjour Admin,</p>
 <p style="font-size:13px;color:#4B5563;">Une nouvelle inscription vient d'être réalisée sur <strong>SCAP BEN</strong>.</p>
 <table width="100%" style="font-size:13px;color:#374151;">
-<tr><td style="padding:6px 0;width:140px;color:#6B7280;">Nom complet</td><td>${fullName || "-"}</td></tr>
-<tr><td style="padding:6px 0;color:#6B7280;">Email</td><td>${email || "-"}</td></tr>
-<tr><td style="padding:6px 0;color:#6B7280;">Langue</td><td>${locale || "-"}</td></tr>
-<tr><td style="padding:6px 0;color:#6B7280;">Date / heure</td><td>${createdAt || "-"}</td></tr>
+<tr><td style="padding:6px 0;width:140px;color:#6B7280;">Nom complet</td><td>${escapeHtml(fullName || "-")}</td></tr>
+<tr><td style="padding:6px 0;color:#6B7280;">Email</td><td>${escapeHtml(email || "-")}</td></tr>
+<tr><td style="padding:6px 0;color:#6B7280;">Langue</td><td>${escapeHtml(locale || "-")}</td></tr>
+<tr><td style="padding:6px 0;color:#6B7280;">Date / heure</td><td>${escapeHtml(createdAt || "-")}</td></tr>
 </table></td></tr>
 <tr><td style="padding:16px 24px;border-top:1px solid #E5E7EB;background:#F9FAFB;">
 <p style="margin:0;font-size:11px;color:#9CA3AF;">Message généré automatiquement.</p></td></tr>
@@ -495,7 +497,7 @@ async function sendRegistrationAdminEmail({ to, user, createdAt }) {
   });
 
   await transporter.sendMail({
-    from: { name: "SCAP BEN", address: process.env.SMTP_FROM || "no-reply@scap-ben.com" },
+    from: fromAddress(),
     to,
     subject: "SCAP BEN - Nouvelle inscription",
     text: `Nouvelle inscription\nNom: ${fullName}\nEmail: ${email}\nLangue: ${locale}\nDate: ${createdAt}`,
@@ -514,11 +516,11 @@ async function sendWelcomeEmail(to, fullName, accountNumber, locale = "fr") {
   const template = emailTemplates[locale] || emailTemplates["fr"];
 
   await transporter.sendMail({
-    from: { name: "SCAP BEN", address: process.env.SMTP_FROM || "no-reply@scap-ben.com" },
+    from: fromAddress(),
     to,
     subject: template.subject,
     text: template.text(fullName, accountNumber),
-    html: template.html(fullName, accountNumber),
+    html: template.html(escapeHtml(fullName), accountNumber),
   });
 }
 

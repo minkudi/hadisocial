@@ -90,7 +90,12 @@ export async function POST(req, ctx) {
       timeZone: "Europe/Berlin",
     });
 
-    // notifications email + SMS (on ne bloque pas la transaction en cas d'erreur)
+    await db.commit();
+    try {
+      await db.end();
+    } catch {}
+
+    // notifications email + SMS après commit : jamais de mail pour une opération annulée
     try {
       if (user.email) {
         const { subject, text, html } = buildTransactionEmail({
@@ -131,16 +136,15 @@ if (user.phone) {
       console.error("Credit notification error:", notifyErr);
     }
 
-    await db.commit();
-    await db.end();
-
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Admin credit error:", err);
     try {
       await db.rollback();
     } catch {}
-    await db.end();
+    try {
+      await db.end();
+    } catch {}
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

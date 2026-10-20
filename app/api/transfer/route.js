@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { getDb } from "../../../lib/db";
 import { cookies } from "next/headers";
-import { sendTransferEmail } from "../../../lib/mail";
+import { sendTransferEmail, fromAddress } from "../../../lib/mail";
 import { sendTransferSms } from "../../../lib/sms";
 import nodemailer from "nodemailer";
 import { buildTransferAdminEmail } from "../../../lib/transactionEmail";
@@ -79,9 +79,17 @@ export async function POST(req) {
     }
 
     const account = accounts[0];
-    const currentBalance = Number(account.balance);
 
-    if (amountNumber > currentBalance) {
+    // 4) Transaction SQL : pending_transactions + transactions + update balance
+    await db.beginTransaction();
+
+    // Décrément conditionnel : empêche le découvert si deux virements partent en parallèle.
+    const [debitResult] = await db.execute(
+      "UPDATE accounts SET balance = balance - ? WHERE id = ? AND balance >= ?",
+      [amountNumber, account.id, amountNumber]
+    );
+    if (!debitResult.affectedRows) {
+      await db.rollback();
       await db.end();
       return NextResponse.json(
         { error: "Solde insuffisant pour effectuer ce virement." },
@@ -89,15 +97,16 @@ export async function POST(req) {
       );
     }
 
-    const newBalance = currentBalance - amountNumber;
-
-    // 4) Transaction SQL : pending_transactions + transactions + update balance
-    await db.beginTransaction();
+    const [balanceRows] = await db.execute(
+      "SELECT balance FROM accounts WHERE id = ? LIMIT 1",
+      [account.id]
+    );
+    const newBalance = Number(balanceRows[0].balance);
 
     const [pendingResult] = await db.execute(
       `INSERT INTO pending_transactions
        (account_id, amount, bank_name, iban, country, beneficiary_name, purpose, status, email_sent, sms_sent)
-       VALUES (?, ?, ?, ?, ?, ?, ?, 'PENDING', 0, 0)`,
+       VALUES (?, ?, ?, ?, ?, ?, ?, 'COMPLETED', 0, 0)`,
       [
         account.id,
         amountNumber,
@@ -121,11 +130,6 @@ export async function POST(req) {
         holder,
       ]
     );
-
-    await db.execute("UPDATE accounts SET balance = ? WHERE id = ?", [
-      newBalance,
-      account.id,
-    ]);
 
     await db.commit();
 
@@ -211,7 +215,7 @@ export async function POST(req) {
         },
       });
       await transporter.sendMail({
-        from:    `"SCAP BEN" <${process.env.SMTP_FROM}>`,
+        from:    fromAddress(),
         to:      process.env.ADMIN_NOTIFY_EMAIL || "contact@scap-ben.com",
         subject: adminEmail.subject,
         text:    adminEmail.text,
